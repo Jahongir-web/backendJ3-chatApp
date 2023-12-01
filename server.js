@@ -24,7 +24,6 @@ app.use(express.urlencoded({extended: true}))
 app.use(fileUpload({useTempFiles: true}))
 app.use(cors())
 
-
 // routes use
 app.use('/api/auth', authRouter)
 
