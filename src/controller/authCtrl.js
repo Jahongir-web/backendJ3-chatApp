@@ -26,7 +26,7 @@ const authCtrl = {
 
       const {password, ...otherDetails} = user._doc
 
-      const token = JWT.sign(otherDetails, JWT_SECRET_KEY, {expiresIn: "1h"})
+      const token = JWT.sign(otherDetails, JWT_SECRET_KEY, {expiresIn: "2h"})
 
       res.status(201).json({message: "signup success", user: otherDetails, token})
 
@@ -50,7 +50,7 @@ const authCtrl = {
       }
       const {password, ...otherDetails} = existingUser._doc;
 
-      const token = JWT.sign(otherDetails, JWT_SECRET_KEY, {expiresIn: "1h"})
+      const token = JWT.sign(otherDetails, JWT_SECRET_KEY, {expiresIn: "2h"})
 
       res.status(200).json({message: "login success", user: otherDetails, token})
 
